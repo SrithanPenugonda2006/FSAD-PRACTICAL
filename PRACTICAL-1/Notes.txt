@@ -1,1 +1,2 @@
-Hello, I am Srithan Penugonda
+Hello, I am Srithan Penugonda.
+Bug fixed in notes.
