@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id = "student" class = "com.klu.model.Student" >
+		<constructor-arg value = "2400030367"></constructor-arg>
+		<constructor-arg value = "Srithan"></constructor-arg>
+		<property name = "course" value = "FSAD"></property>
+		<property name = "academicYear" value = "2025-2026"></property>
+	</bean>
+</beans>
