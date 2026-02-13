@@ -8,7 +8,6 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // Try AUTO / SEQUENCE / IDENTITY one by one
     private int id;
 
     @Column(nullable = false)

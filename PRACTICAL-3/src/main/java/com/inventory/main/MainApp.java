@@ -121,7 +121,7 @@ public class MainApp {
         System.out.println("Products with Quantity > 0: " + available);
 
         List<Object[]> list = session.createQuery(
-                "select description, count(*) from Product group by description").list();
+        		"select description, count(*) from Product group by description").list();
         list.forEach(o -> System.out.println(o[0] + " : " + o[1]));
 
         Object[] price = (Object[]) session.createQuery(
