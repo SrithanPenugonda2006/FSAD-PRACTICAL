@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "phone": "+1-555-1001",
+        "city": "New York"
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "email": "bob.smith@example.com",
+        "phone": "+1-555-1002",
+        "city": "Los Angeles"
+    },
+    {
+        "id": 3,
+        "name": "Carol White",
+        "email": "carol.white@example.com",
+        "phone": "+1-555-1003",
+        "city": "Chicago"
+    },
+    {
+        "id": 4,
+        "name": "David Brown",
+        "email": "david.brown@example.com",
+        "phone": "+1-555-1004",
+        "city": "Houston"
+    },
+    {
+        "id": 5,
+        "name": "Eva Martinez",
+        "email": "eva.martinez@example.com",
+        "phone": "+1-555-1005",
+        "city": "Phoenix"
+    },
+    {
+        "id": 6,
+        "name": "Frank Lee",
+        "email": "frank.lee@example.com",
+        "phone": "+1-555-1006",
+        "city": "Seattle"
+    }
+]

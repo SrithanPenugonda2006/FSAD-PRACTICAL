@@ -1,0 +1,112 @@
+/* ─── Dashboard ─── */
+.dashboard {
+    padding: 1rem 0;
+}
+
+.dashboard-hero {
+    text-align: center;
+    padding: 3rem 1rem 2.5rem;
+}
+
+.dashboard-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6c63ff, #00c9a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.6rem;
+}
+
+.dashboard-subtitle {
+    color: #8b92a5;
+    font-size: 1.05rem;
+}
+
+/* ─── Cards ─── */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.dash-card {
+    background: #1a1d27;
+    border: 1px solid #2e3347;
+    border-radius: 14px;
+    padding: 2rem;
+    text-decoration: none;
+    color: #e8eaf0;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    cursor: pointer;
+}
+
+.dash-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-local:hover {
+    border-color: #6c63ff;
+}
+
+.card-api:hover {
+    border-color: #00c9a7;
+}
+
+.card-fake:hover {
+    border-color: #ff6b9d;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+}
+
+.dash-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.dash-card p {
+    color: #8b92a5;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.dash-card code {
+    background: rgba(108, 99, 255, 0.15);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    color: #a09fff;
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 0.4rem;
+}
+
+.card-local .card-badge {
+    background: rgba(108, 99, 255, 0.2);
+    color: #a09fff;
+}
+
+.card-api .card-badge {
+    background: rgba(0, 201, 167, 0.2);
+    color: #00c9a7;
+}
+
+.card-fake .card-badge {
+    background: rgba(255, 107, 157, 0.2);
+    color: #ff6b9d;
+}

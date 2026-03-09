@@ -1,0 +1,77 @@
+/* Shared list styles */
+.list-container {
+    padding: 0.5rem 0;
+}
+
+.list-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #e8eaf0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+.user-card {
+    background: #1a1d27;
+    border: 1px solid #2e3347;
+    border-radius: 14px;
+    padding: 1.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.user-card:hover {
+    border-color: #6c63ff;
+    transform: translateY(-3px);
+}
+
+.user-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6c63ff, #00c9a7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.user-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #e8eaf0;
+}
+
+.user-info p {
+    font-size: 0.83rem;
+    color: #8b92a5;
+    margin-bottom: 0.2rem;
+}
+
+.status-msg {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 1.05rem;
+    border-radius: 14px;
+}
+
+.status-msg.loading {
+    background: rgba(108, 99, 255, 0.08);
+    color: #a09fff;
+}
+
+.status-msg.error {
+    background: rgba(255, 107, 107, 0.08);
+    color: #ff7c7c;
+}
