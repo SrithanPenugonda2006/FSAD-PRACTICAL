@@ -1,0 +1,281 @@
+/* =============================================
+   StudentManager.css – Clean academic portal UI
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sm-container {
+  font-family: 'Inter', sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+/* ---- Header ---- */
+.sm-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  padding: 28px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 32px rgba(15, 52, 96, 0.35);
+}
+
+.sm-header-icon {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.sm-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.sm-subtitle {
+  font-size: 0.85rem;
+  color: #a0b4cc;
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---- Section wrapper ---- */
+.sm-form-section,
+.sm-list-section {
+  background: #ffffff;
+  border: 1px solid #e8ecf0;
+  border-radius: 14px;
+  padding: 28px 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sm-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sm-badge {
+  background: #0f3460;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Form ---- */
+.sm-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.sm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sm-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #5a6a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.sm-field input {
+  padding: 10px 14px;
+  border: 1.5px solid #d8e0ea;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #1a1a2e;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.sm-field input:focus {
+  border-color: #0f3460;
+  box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.1);
+  background: #fff;
+}
+
+.sm-field input::placeholder {
+  color: #b0bec5;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #0f3460, #1a5fa6);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 52, 96, 0.35);
+  align-self: flex-end;
+}
+
+.btn-add:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 18px rgba(15, 52, 96, 0.45);
+}
+
+.btn-delete {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1.5px solid #f5c6c2;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+}
+
+.btn-delete:hover {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+  box-shadow: 0 3px 10px rgba(192, 57, 43, 0.3);
+}
+
+/* ---- Table ---- */
+.sm-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e8ecf0;
+}
+
+.sm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sm-table thead {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+}
+
+.sm-table thead th {
+  color: #a0b4cc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 13px 18px;
+  text-align: left;
+}
+
+.sm-table tbody tr {
+  border-bottom: 1px solid #f0f4f8;
+  transition: background 0.15s;
+}
+
+.sm-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.sm-table tbody tr:hover {
+  background: #f5f8ff;
+}
+
+.sm-table td {
+  padding: 13px 18px;
+  color: #2c3e50;
+  vertical-align: middle;
+}
+
+.sm-serial {
+  color: #a0b4cc !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.sm-id {
+  font-weight: 700;
+  color: #0f3460 !important;
+  font-size: 0.88rem;
+}
+
+.sm-name {
+  font-weight: 600;
+  color: #1a1a2e !important;
+}
+
+.sm-course-badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1a5fa6;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---- Empty state ---- */
+.sm-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #a0b4cc;
+  gap: 12px;
+}
+
+.sm-empty-icon {
+  font-size: 3rem;
+}
+
+.sm-empty p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #8090a0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .sm-form {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
