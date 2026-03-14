@@ -1,16 +1,8 @@
 import { useState } from 'react'
 import './StudentManager.css'
 
-const initialStudents = [
-    { id: 1, name: 'Alice Johnson', course: 'Computer Science' },
-    { id: 2, name: 'Bob Smith', course: 'Information Technology' },
-    { id: 3, name: 'Carol Williams', course: 'Electronics Engineering' },
-    { id: 4, name: 'David Brown', course: 'Mechanical Engineering' },
-    { id: 5, name: 'Eva Martinez', course: 'Data Science' },
-]
-
 function StudentManager() {
-    const [students, setStudents] = useState(initialStudents)
+    const [students, setStudents] = useState([])
     const [newStudent, setNewStudent] = useState({ id: '', name: '', course: '' })
 
     // Handle input changes and update newStudent object

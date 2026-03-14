@@ -1,39 +1,36 @@
 package com.klu.exception;
 
-import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
+
+import java.time.LocalDateTime;
+import java.util.*;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-@ExceptionHandler(StudentNotFoundException.class)
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public Map<String,Object> handleStudentNotFound(StudentNotFoundException ex){
+    @ExceptionHandler(StudentNotFoundException.class)
+    public ResponseEntity<Map<String,Object>> handleStudentNotFound(StudentNotFoundException ex){
 
-Map<String,Object> error=new HashMap<>();
+        Map<String,Object> error=new HashMap<>();
 
-error.put("timestamp",LocalDateTime.now());
-error.put("message",ex.getMessage());
-error.put("statusCode",404);
+        error.put("timestamp", LocalDateTime.now());
+        error.put("message", ex.getMessage());
+        error.put("statusCode",404);
 
-return error;
-}
+        return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);
+    }
 
-@ExceptionHandler(InvalidInputException.class)
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-public Map<String,Object> handleInvalidInput(InvalidInputException ex){
+    @ExceptionHandler(InvalidInputException.class)
+    public ResponseEntity<Map<String,Object>> handleInvalidInput(InvalidInputException ex){
 
-Map<String,Object> error=new HashMap<>();
+        Map<String,Object> error=new HashMap<>();
 
-error.put("timestamp",LocalDateTime.now());
-error.put("message",ex.getMessage());
-error.put("statusCode",400);
+        error.put("timestamp", LocalDateTime.now());
+        error.put("message", ex.getMessage());
+        error.put("statusCode",400);
 
-return error;
-}
+        return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+    }
 
 }

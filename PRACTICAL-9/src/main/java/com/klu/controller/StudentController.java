@@ -9,26 +9,31 @@ import com.klu.model.Student;
 import com.klu.service.StudentService;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/student1")
 public class StudentController {
 
-@Autowired
-StudentService service;
+	@Autowired
+	StudentService service;
+	
+	@PostMapping("/add")
+	public Student addStudent(@RequestBody Student s) {
+		return service.addStudent(s);
+	}
 
-@GetMapping("/{id}")
-public Student getStudent(@PathVariable int id){
+	@GetMapping("/{id}")
+	public Student getStudent(@PathVariable int id){
 
-if(id<=0){
-throw new InvalidInputException("Invalid student ID");
-}
+		if(id <= 0){
+			throw new InvalidInputException("Invalid student ID");
+		}
 
-Student s=service.getStudentById(id);
+		Student s=service.getStudentById(id);
 
-if(s==null){
-throw new StudentNotFoundException("Student with ID "+id+" not found");
-}
+		if(s == null){
+			throw new StudentNotFoundException("Student with ID "+id+" not found");
+		}
 
-return s;
-}
+		return s;
+	}
 
 }

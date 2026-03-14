@@ -6,19 +6,19 @@ import com.klu.model.Product;
 
 public interface ProductRepository extends JpaRepository<Product,Integer>{
 
-// Derived query
-List<Product> findByCategory(String category);
+	// Derived query
+	List<Product> findByCategory(String category);
 
-List<Product> findByPriceBetween(double min,double max);
+	List<Product> findByPriceBetween(double min,double max);
 
-// JPQL
-@Query("SELECT p FROM Product p ORDER BY p.price")
-List<Product> sortByPrice();
+	// JPQL
+	@Query("SELECT p FROM Product p ORDER BY p.price")
+	List<Product> sortByPrice();
 
-@Query("SELECT p FROM Product p WHERE p.price > :price")
-List<Product> expensiveProducts(double price);
+	@Query("SELECT p FROM Product p WHERE p.price > :price")
+	List<Product> expensiveProducts(double price);
 
-@Query("SELECT p FROM Product p WHERE p.category = :category")
-List<Product> categoryProducts(String category);
+	@Query("SELECT p FROM Product p WHERE p.category = :category")
+	List<Product> categoryProducts(String category);
 
 }

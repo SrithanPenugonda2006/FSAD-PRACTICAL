@@ -12,37 +12,37 @@ import com.klu.service.ProductService;
 @RequestMapping("/products")
 public class ProductController {
 
-@Autowired
-ProductService service;
+	@Autowired
+	ProductService service;
 
-@PostMapping
-public Product addProduct(@RequestBody Product product){
-return service.saveProduct(product);
-}
+	@PostMapping
+	public Product addProduct(@RequestBody Product product){
+		return service.saveProduct(product);
+	}
 
-@GetMapping
-public List<Product> getAllProducts(){
-return service.getAllProducts();
-}
+	@GetMapping
+	public List<Product> getAllProducts(){
+		return service.getAllProducts();
+	}
 
-@GetMapping("/category/{category}")
-public List<Product> getByCategory(@PathVariable String category){
-return service.getByCategory(category);
-}
+	@GetMapping("/category/{category}")
+	public List<Product> getByCategory(@PathVariable String category){
+		return service.getByCategory(category);
+	}
 
-@GetMapping("/filter")
-public List<Product> getByRange(@RequestParam double min,@RequestParam double max){
-return service.getByPriceRange(min,max);
-}
+	@GetMapping("/filter")
+	public List<Product> getByRange(@RequestParam double min,@RequestParam double max){
+		return service.getByPriceRange(min,max);
+	}
+	
+	@GetMapping("/sorted")
+	public List<Product> sortedProducts(){
+		return service.getSortedProducts();
+	}
 
-@GetMapping("/sorted")
-public List<Product> sortedProducts(){
-return service.getSortedProducts();
-}
-
-@GetMapping("/expensive/{price}")
-public List<Product> expensive(@PathVariable double price){
-return service.getExpensiveProducts(price);
-}
+	@GetMapping("/expensive/{price}")
+	public List<Product> expensive(@PathVariable double price){
+		return service.getExpensiveProducts(price);
+	}
 
 }

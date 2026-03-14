@@ -10,12 +10,17 @@ import com.klu.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-@Autowired
-StudentRepo repo;
+	@Autowired
+	StudentRepo repo;
+	
+	@Override
+	public Student addStudent(Student s) {
+		return repo.save(s);
+	}
 
-@Override
-public Student getStudentById(int id){
-return repo.findById(id).orElse(null);
-}
+	@Override
+	public Student getStudentById(int id){
+		return repo.findById(id).orElse(null);
+	}
 
 }

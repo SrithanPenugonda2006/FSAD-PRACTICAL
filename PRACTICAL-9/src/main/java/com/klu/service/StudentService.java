@@ -4,6 +4,7 @@ import com.klu.model.Student;
 
 public interface StudentService {
 
-Student getStudentById(int id);
+	public Student addStudent(Student s);
+	public Student getStudentById(int id);
 
 }
