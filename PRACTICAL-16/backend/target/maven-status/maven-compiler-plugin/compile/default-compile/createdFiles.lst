@@ -1,0 +1,5 @@
+com/practical/studentapp/repository/StudentRepository.class
+com/practical/studentapp/service/StudentService.class
+com/practical/studentapp/StudentAppApplication.class
+com/practical/studentapp/controller/StudentController.class
+com/practical/studentapp/model/Student.class
